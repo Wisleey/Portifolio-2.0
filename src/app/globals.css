@@ -1,0 +1,205 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f1f2ee;
+  --surface: #fafaf7;
+  --foreground: #161a17;
+  --muted: #5c635e;
+  --border: #c9cdc6;
+  --accent: #1e5c4e;
+  --accent-hover: #16463b;
+  --focus: #1e5c4e;
+  --disabled: #9aa19b;
+
+  --card: #fafaf7;
+  --card-foreground: #161a17;
+  --popover: #fafaf7;
+  --popover-foreground: #161a17;
+  --primary: #1e5c4e;
+  --primary-foreground: #fafaf7;
+  --secondary: #e4e6e0;
+  --secondary-foreground: #161a17;
+  --muted-foreground: #5c635e;
+  --accent-foreground: #fafaf7;
+  --destructive: #a33f2e;
+  --input: #c9cdc6;
+  --ring: #1e5c4e;
+  --radius: 0.25rem;
+}
+
+.dark {
+  --background: #141714;
+  --surface: #1b1f1c;
+  --foreground: #edeee9;
+  --muted: #a4aba6;
+  --border: #3a403c;
+  --accent: #8fbfb0;
+  --accent-hover: #b3d4c9;
+  --focus: #8fbfb0;
+  --disabled: #6b736e;
+
+  --card: #1b1f1c;
+  --card-foreground: #edeee9;
+  --popover: #1b1f1c;
+  --popover-foreground: #edeee9;
+  --primary: #8fbfb0;
+  --primary-foreground: #141714;
+  --secondary: #242923;
+  --secondary-foreground: #edeee9;
+  --muted-foreground: #a4aba6;
+  --accent-foreground: #141714;
+  --destructive: #d07a63;
+  --input: #3a403c;
+  --ring: #8fbfb0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-focus: var(--focus);
+  --color-disabled: var(--disabled);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-display);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+  color: var(--foreground);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Entrada suave das seções */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise {
+    animation: none;
+  }
+}
+
+/* React Bits mantém a identidade tipográfica do portfólio. */
+.fold-text.name-fold {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+}
+
+.contact-stroke .stroke-text__stroke,
+.contact-stroke .stroke-text__fill {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+.contact-stroke {
+  transition: opacity 200ms ease;
+}
+
+a:hover .contact-stroke {
+  opacity: 0.72;
+}
+
+/* Chips das esteiras de tecnologia */
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.tech-chip svg {
+  width: 1.375rem;
+  height: 1.375rem;
+  color: var(--foreground);
+}
