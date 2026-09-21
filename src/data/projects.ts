@@ -122,7 +122,7 @@ export const projects: Project[] = [
     solution: "Interface de delivery com cardápio, pedido e navegação móvel.",
     stack: ["React"],
     github: "https://github.com/Wisleey/WisleyFood",
-    live: "https://wisley-food.vercel.app/",
+    live: "",
     image: "/projects/wisley-food.png",
     imageAlt: "Interface do aplicativo de estudo Wisley Food.",
     status: "study",

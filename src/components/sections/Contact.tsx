@@ -7,12 +7,12 @@ export function Contact() {
   return (
     <section
       id="contato"
-      className="scroll-mt-20 border-t border-border py-16 md:py-24 lg:py-32 lg:scroll-mt-8"
+      className="scroll-mt-20 border-t border-border py-16 text-center md:py-24 lg:py-32 lg:scroll-mt-8"
     >
       <p className="font-mono text-[0.75rem] uppercase tracking-[0.14em] text-muted">
         Fale comigo
       </p>
-      <h2 className="mt-5 max-w-4xl">
+      <h2 className="mx-auto mt-5 max-w-4xl">
         <a
           href={`mailto:${site.email}`}
           className="block"
@@ -36,7 +36,7 @@ export function Contact() {
           />
         </a>
       </h2>
-      <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8">
+      <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-8">
         <TextLink href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</TextLink>
         <TextLink href={site.whatsapp} external>
           WhatsApp

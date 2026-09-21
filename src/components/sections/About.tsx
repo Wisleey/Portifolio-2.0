@@ -21,7 +21,7 @@ export function About() {
 
         <div className="lg:col-span-6">
           <p className="max-w-2xl text-[clamp(1.35rem,2.5vw,2rem)] font-medium leading-[1.25] tracking-[-0.025em]">
-            Tecnologia, para mim, precisa funcionar tanto para quem usa quanto
+            Tecnologia para mim precisa funcionar tanto para quem usa quanto
             para quem opera.
           </p>
           <div className="mt-8 grid gap-6 text-muted sm:grid-cols-2">

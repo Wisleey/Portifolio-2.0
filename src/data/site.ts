@@ -18,15 +18,15 @@ export const site = {
   portrait: "/portrait/wisley-avatar.png",
   portraitAlt:
     "Ilustração de corpo inteiro de Wisley Rodrigues.",
-  resume: "/CurriculoWisleyNovo2026.pdf",
+  resume: "/CurriculoWisleyRodrigues.pdf",
   resumeDownloadName: "Curriculo-Wisley-Rodrigues.pdf",
   copyrightYear: 2026,
 };
 
 export const navItems: NavItem[] = [
   { id: "introducao", label: "Introdução" },
-  { id: "trabalho", label: "Trabalho" },
-  { id: "oficio", label: "Ofício" },
+  { id: "Projetos", label: "Projetos" },
+  { id: "oficio", label: "Tecnologias" },
   { id: "pratica", label: "Prática" },
   { id: "contato", label: "Contato" },
 ];

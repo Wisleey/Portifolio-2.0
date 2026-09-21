@@ -39,7 +39,7 @@ export function Intro() {
             {site.headline}
           </p>
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
-            <TextLink href="#trabalho">Ver trabalho</TextLink>
+            <TextLink href="#Projetos">Ver Projetos</TextLink>
             <TextLink href="#contato">Fale comigo</TextLink>
             <TextLink href={site.resume} download={site.resumeDownloadName}>
               Baixar currículo

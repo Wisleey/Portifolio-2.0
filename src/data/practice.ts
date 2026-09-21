@@ -1,13 +1,13 @@
 import type { PracticeItem } from "@/types";
 
 export const practiceIntro =
-  "Desenvolvimento de produto e processos internos fazem parte da mesma prática: entender a operação, reduzir atrito e entregar software que continue sustentável.";
+  "Produto, processos e engenharia de software fazem parte da mesma prática: entender a operação, reduzir atrito e entregar sistemas fáceis de evoluir.";
 
 export const practiceItems: PracticeItem[] = [
   {
     label: "Formação",
     title: "Sistemas para Internet — UNIESP PB",
-    body: "Base em produtos web e 30 anos de idade, construindo uma trajetória que combina engenharia, experiência e contexto de negócio.",
+    body: "Formação em Sistemas para Internet e estudos contínuos em engenharia de software, com foco em produto, arquitetura, qualidade e contexto de negócio.",
   },
   {
     label: "Processos",
@@ -21,7 +21,7 @@ export const practiceItems: PracticeItem[] = [
   },
   {
     label: "Método",
-    title: "UX, performance e segurança",
-    body: "Interfaces responsivas, autenticação com JWT, APIs e atenção a teste, detalhe de interface e escalabilidade.",
+    title: "SOLID, testes e arquitetura",
+    body: "Princípios de SOLID e Clean Code, APIs REST, autenticação com JWT, versionamento com Git, testes com Jest e atenção a performance, segurança e escalabilidade.",
   },
 ];
