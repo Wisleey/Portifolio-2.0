@@ -1,20 +1,30 @@
 import { TechMarquee } from "@/components/sections/TechMarquee";
 
+const words = ["Next.js", "React", "TypeScript", "Node.js", "Java", "Spring", "PostgreSQL", "Fluig"];
+
+/** Faixa de transição: palavras gigantes que correm com a rolagem + esteira de tecnologias. */
 export function Stack() {
   return (
-    <section
-      id="oficio"
-      className="scroll-mt-20 border-t border-border py-16 md:py-24 lg:py-28 lg:scroll-mt-8"
-    >
-      <div className="mb-12 flex items-baseline justify-between gap-4">
-        <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-medium tracking-[-0.02em]">
-          Tecnologias
-        </h2>
-        <p className="max-w-xs text-right font-mono text-[0.75rem] uppercase tracking-[0.14em] text-muted">
-          Ferramentas em produção
+    <section aria-label="Tecnologias" className="overflow-hidden border-t border-border py-20 md:py-28">
+      <div aria-hidden className="flex flex-col gap-2">
+        <p data-drift="-30" className="display whitespace-nowrap text-[clamp(4rem,11vw,9rem)]">
+          {words.map((word) => (
+            <span key={word} className="mr-8">
+              {word} <span className="text-accent">/</span>
+            </span>
+          ))}
+        </p>
+        <p data-drift="30" className="display outline-text whitespace-nowrap text-[clamp(4rem,11vw,9rem)]">
+          {[...words].reverse().map((word) => (
+            <span key={word} className="mr-8">
+              {word} /
+            </span>
+          ))}
         </p>
       </div>
-      <TechMarquee />
+      <div className="wrap mt-16">
+        <TechMarquee />
+      </div>
     </section>
   );
 }

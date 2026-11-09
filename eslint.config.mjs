@@ -12,12 +12,14 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Skills do Claude Code (kit de terceiros, não faz parte do site).
+    ".claude/**",
   ]),
   // Componentes vendorizados do React Bits (mantidos como distribuídos).
   {
     files: [
       "src/components/LogoLoop.tsx",
-      "src/components/Threads.tsx",
+      "src/components/Particles.jsx",
     ],
     rules: {
       "@typescript-eslint/no-explicit-any": "off",

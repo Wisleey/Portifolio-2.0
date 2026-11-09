@@ -23,17 +23,6 @@ export type StackGroup = {
   items: string[];
 };
 
-export type PracticeItem = {
-  label: string;
-  title: string;
-  body: string;
-};
-
-export type SocialLink = {
-  label: string;
-  href: string;
-};
-
 export type NavItem = {
   id: string;
   label: string;

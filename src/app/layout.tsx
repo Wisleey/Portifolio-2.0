@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Bricolage_Grotesque, IBM_Plex_Mono, Geist } from "next/font/google";
+import { Anton, Geist, IBM_Plex_Mono } from "next/font/google";
 import { site } from "@/data/site";
-import "./globals.css";
 import { cn } from "@/lib/utils";
+import "./globals.css";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const display = Bricolage_Grotesque({
+const body = Geist({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-body",
+  display: "swap",
+});
+
+const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-anton",
   display: "swap",
 });
 
@@ -24,7 +29,7 @@ const description = site.summary;
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} — Full Stack`,
+    default: `${site.name} — Desenvolvedor Full Stack`,
     template: `%s — ${site.name}`,
   },
   description,
@@ -36,24 +41,23 @@ export const metadata: Metadata = {
     "Next.js",
     "React",
     "TypeScript",
+    "Node.js",
+    "Java",
+    "Spring Boot",
+    "TOTVS Fluig",
     "portfólio",
   ],
   robots: { index: true, follow: true },
   openGraph: {
-    title: `${site.name} — Full Stack`,
+    title: `${site.name} — Desenvolvedor Full Stack`,
     description,
     locale: "pt_BR",
     type: "website",
-    images: [
-      {
-        url: site.portrait,
-        alt: site.portraitAlt,
-      },
-    ],
+    images: [{ url: site.portrait, alt: site.portraitAlt }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — Full Stack`,
+    title: `${site.name} — Desenvolvedor Full Stack`,
     description,
     images: [site.portrait],
   },
@@ -70,16 +74,13 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={cn("h-full", "antialiased", display.variable, mono.variable, "font-sans", geist.variable)}
-      suppressHydrationWarning
+      className={cn(
+        "dark h-full antialiased",
+        body.variable,
+        anton.variable,
+        mono.variable,
+      )}
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{if(localStorage.getItem("theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}})();`,
-          }}
-        />
-      </head>
       <body className="min-h-full bg-background font-sans text-foreground">
         {children}
       </body>

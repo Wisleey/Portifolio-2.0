@@ -1,19 +1,18 @@
+import { ArrowUp } from "lucide-react";
 import { site } from "@/data/site";
-import { TextLink } from "@/components/ui/TextLink";
+import { Logo } from "@/components/layout/SiteNav";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto flex w-full max-w-[1120px] flex-col gap-4 px-6 py-10 md:flex-row md:items-end md:justify-between md:px-8">
-        <p className="text-sm leading-relaxed text-muted">
+      <div className="wrap flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between">
+        <Logo />
+        <p className="eyebrow text-[0.64rem] text-muted">
           © {site.copyrightYear} {site.name}. Todos os direitos reservados.
         </p>
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-x-6">
-          <TextLink href={site.resume} download={site.resumeDownloadName}>
-            Currículo
-          </TextLink>
-          <TextLink href={`mailto:${site.email}`}>{site.email}</TextLink>
-        </div>
+        <a href="#topo" className="eyebrow link-draw text-[0.64rem] text-muted hover:text-foreground">
+          Voltar ao topo <ArrowUp className="h-3.5 w-3.5 text-accent" aria-hidden />
+        </a>
       </div>
     </footer>
   );

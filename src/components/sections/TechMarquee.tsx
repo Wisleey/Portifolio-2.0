@@ -2,11 +2,14 @@
 
 import type { IconType } from "react-icons";
 import {
-  SiCloudinary,
+  SiDocker,
+  SiExpress,
   SiFirebase,
   SiGit,
   SiJavascript,
+  SiJira,
   SiJsonwebtokens,
+  SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
   SiOpenjdk,
@@ -14,9 +17,10 @@ import {
   SiPrisma,
   SiReact,
   SiSpring,
+  SiStripe,
+  SiSwagger,
   SiTailwindcss,
   SiTypescript,
-  SiVite,
 } from "react-icons/si";
 import LogoLoop, { type LogoItem } from "@/components/LogoLoop";
 
@@ -28,18 +32,22 @@ const topRow: Tech[] = [
   [SiTypescript, "TypeScript"],
   [SiJavascript, "JavaScript"],
   [SiNodedotjs, "Node.js"],
+  [SiExpress, "Express"],
   [SiOpenjdk, "Java"],
-  [SiSpring, "Spring"],
+  [SiSpring, "Spring Boot"],
   [SiTailwindcss, "Tailwind CSS"],
 ];
 
 const bottomRow: Tech[] = [
   [SiPostgresql, "PostgreSQL"],
   [SiPrisma, "Prisma"],
+  [SiMongodb, "MongoDB"],
   [SiFirebase, "Firebase"],
-  [SiCloudinary, "Cloudinary"],
+  [SiStripe, "Stripe"],
   [SiJsonwebtokens, "JWT"],
-  [SiVite, "Vite"],
+  [SiDocker, "Docker"],
+  [SiSwagger, "Swagger"],
+  [SiJira, "Jira"],
   [SiGit, "Git"],
 ];
 
@@ -65,24 +73,24 @@ export function TechMarquee() {
       <LogoLoop
         logos={topLogos}
         direction="right"
-        speed={60}
+        speed={50}
         logoHeight={20}
         gap={56}
         fadeOut
-        fadeOutColor="var(--background)"
+        fadeOutColor="#0a0a0a"
         pauseOnHover
         ariaLabel="Tecnologias de interface e servidor"
       />
       <LogoLoop
         logos={bottomLogos}
         direction="left"
-        speed={60}
+        speed={50}
         logoHeight={20}
         gap={56}
         fadeOut
-        fadeOutColor="var(--background)"
+        fadeOutColor="#0a0a0a"
         pauseOnHover
-        ariaLabel="Tecnologias de dados e integrações"
+        ariaLabel="Tecnologias de dados, integrações e entrega"
       />
     </div>
   );

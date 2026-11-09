@@ -1,24 +1,25 @@
 import type { StackGroup } from "@/types";
 
+/** Fonte: competências técnicas do currículo de 2026. */
 export const stackGroups: StackGroup[] = [
   {
-    label: "Linguagens",
-    items: ["TypeScript", "JavaScript", "Java"],
+    label: "Front-end",
+    items: ["React", "Next.js", "TypeScript"],
   },
   {
-    label: "Interface",
-    items: ["Next.js", "React"],
-  },
-  {
-    label: "Servidor",
-    items: ["Node.js", "Spring Boot", "Prisma"],
+    label: "Back-end",
+    items: ["Node.js", "Java", "Spring Boot"],
   },
   {
     label: "Dados",
-    items: ["PostgreSQL", "Firebase"],
+    items: ["PostgreSQL", "Prisma", "MongoDB"],
   },
   {
     label: "Integrações",
-    items: ["JWT", "Pagar.me", "Cloudinary"],
+    items: ["Pagar.me", "Stripe", "Clicksign"],
+  },
+  {
+    label: "Entrega",
+    items: ["Docker", "AWS", "CI/CD"],
   },
 ];
