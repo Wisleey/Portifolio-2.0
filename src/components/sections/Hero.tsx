@@ -119,7 +119,7 @@ export function Hero() {
             >
               <div>
                 <p className="display text-[2.6rem] text-accent">
-                  <span data-hero-count="2">3</span>+
+                  <span data-hero-count="2">03</span>+
                 </p>
                 <p className="eyebrow mt-1 text-[0.62rem] text-muted">Anos de experiência</p>
               </div>
